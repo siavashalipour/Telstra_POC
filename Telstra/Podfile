@@ -7,4 +7,7 @@ target 'Telstra' do
 
   # Pods for Telstra
   pod 'SnapKit'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'SDWebImage'
 end

@@ -11,6 +11,10 @@
 		7C14C46920842C28002FEC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C14C46720842C28002FEC58 /* Main.storyboard */; };
 		7C14C46B20842C29002FEC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C14C46A20842C29002FEC58 /* Assets.xcassets */; };
 		7C14C46E20842C29002FEC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C14C46C20842C29002FEC58 /* LaunchScreen.storyboard */; };
+		7C14C47A20859E8F002FEC58 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14C47920859E8F002FEC58 /* ApiClient.swift */; };
+		7C14C47C20859EEF002FEC58 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14C47B20859EEF002FEC58 /* DataModel.swift */; };
+		7C14C47E20859F1E002FEC58 /* RowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14C47D20859F1E002FEC58 /* RowModel.swift */; };
+		7C14C4802085A60B002FEC58 /* DropboxApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14C47F2085A60B002FEC58 /* DropboxApiClient.swift */; };
 		CDDFBFAC5460539372CE9E86 /* Pods_Telstra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8468347B1F307102BBF388 /* Pods_Telstra.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +26,10 @@
 		7C14C46A20842C29002FEC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C14C46D20842C29002FEC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C14C46F20842C29002FEC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C14C47920859E8F002FEC58 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		7C14C47B20859EEF002FEC58 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		7C14C47D20859F1E002FEC58 /* RowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModel.swift; sourceTree = "<group>"; };
+		7C14C47F2085A60B002FEC58 /* DropboxApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxApiClient.swift; sourceTree = "<group>"; };
 		8F24F56563570110AFA4E7A4 /* Pods-Telstra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra.release.xcconfig"; path = "Pods/Target Support Files/Pods-Telstra/Pods-Telstra.release.xcconfig"; sourceTree = "<group>"; };
 		FE8468347B1F307102BBF388 /* Pods_Telstra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telstra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,12 +76,32 @@
 			isa = PBXGroup;
 			children = (
 				7C14C46320842C28002FEC58 /* AppDelegate.swift */,
+				7C14C4812085A82E002FEC58 /* Services */,
+				7C14C4822085A83B002FEC58 /* Models */,
 				7C14C46720842C28002FEC58 /* Main.storyboard */,
 				7C14C46A20842C29002FEC58 /* Assets.xcassets */,
 				7C14C46C20842C29002FEC58 /* LaunchScreen.storyboard */,
 				7C14C46F20842C29002FEC58 /* Info.plist */,
 			);
 			path = Telstra;
+			sourceTree = "<group>";
+		};
+		7C14C4812085A82E002FEC58 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7C14C47920859E8F002FEC58 /* ApiClient.swift */,
+				7C14C47F2085A60B002FEC58 /* DropboxApiClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7C14C4822085A83B002FEC58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C14C47B20859EEF002FEC58 /* DataModel.swift */,
+				7C14C47D20859F1E002FEC58 /* RowModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8907D4E84C8FA7AE10E37B59 /* Pods */ = {
@@ -161,10 +189,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Telstra/Pods-Telstra-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C14C46420842C28002FEC58 /* AppDelegate.swift in Sources */,
+				7C14C47A20859E8F002FEC58 /* ApiClient.swift in Sources */,
+				7C14C47E20859F1E002FEC58 /* RowModel.swift in Sources */,
+				7C14C47C20859EEF002FEC58 /* DataModel.swift in Sources */,
+				7C14C4802085A60B002FEC58 /* DropboxApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
