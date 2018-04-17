@@ -44,29 +44,34 @@ final class CustomCell: UITableViewCell {
     }
     
     private func setupUI() {
+        // cleanup 
         _ = contentView.subviews.map({ $0.removeFromSuperview() })
         contentView.addSubview(dataImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(subtitleLabel)
     }
+    
     private func remakeConstraints() {
         dataImageView.snp.remakeConstraints { (make) in
-            make.size.equalTo(dataImageView.image == nil ? 0:60)
+            make.size.equalTo(dataImageView.image == nil ? 0:30)
             make.left.top.equalTo(Constant.defaultMargin)
+            make.bottom.lessThanOrEqualTo(subtitleLabel).priority(500)
+
         }
 
         titleLabel.snp.remakeConstraints { (make) in
             make.top.equalTo(dataImageView)
+            make.height.greaterThanOrEqualTo(22).priority(500)
             make.left.equalTo(dataImageView.snp.right).offset(8)
             make.right.equalTo(-Constant.defaultMargin)
         }
         subtitleLabel.snp.remakeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(4)
             make.left.right.equalTo(titleLabel)
-            make.bottom.lessThanOrEqualTo(-Constant.defaultMargin)
-            make.bottom.equalTo(dataImageView.snp.bottom).priority(500)
+            make.bottom.equalTo(-Constant.defaultMargin)
         }
     }
+    
     func config(with data: RowViewModel) {
         // only gets downloaded and cached as they appeared on the screen
         dataImageView.sd_setImage(with: data.imageHref) { (img, r, SDImageCacheTypeNone, imageHref) in
