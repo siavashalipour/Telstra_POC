@@ -10,3 +10,5 @@ Telstra POC code test
 5. The observable pattern used is very basic and simple and it is not to be consider as a real world best solution
 6. JSON encoding has been achieved via Swift 4 Decodable 
 7. there were some serialisation issue regarding to the format of the json coming from the url which has been address in the code. Please see the comment in the `DropboxApiClient.swift`
+8. as discussed the json link we used is `https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json?` 
+
