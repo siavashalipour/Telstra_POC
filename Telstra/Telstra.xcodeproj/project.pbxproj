@@ -15,6 +15,11 @@
 		7C14C47C20859EEF002FEC58 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14C47B20859EEF002FEC58 /* DataModel.swift */; };
 		7C14C47E20859F1E002FEC58 /* RowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14C47D20859F1E002FEC58 /* RowModel.swift */; };
 		7C14C4802085A60B002FEC58 /* DropboxApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14C47F2085A60B002FEC58 /* DropboxApiClient.swift */; };
+		7CB547BD2085E58F0095A1A3 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB547BC2085E58F0095A1A3 /* ListViewModel.swift */; };
+		7CB547BF2085E8A10095A1A3 /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB547BE2085E8A10095A1A3 /* RowViewModel.swift */; };
+		7CB547C22085E8C50095A1A3 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB547C12085E8C50095A1A3 /* ListViewController.swift */; };
+		7CB547C42085E9210095A1A3 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB547C32085E9210095A1A3 /* CustomCell.swift */; };
+		7CB547C62085F8DC0095A1A3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB547C52085F8DC0095A1A3 /* Constant.swift */; };
 		CDDFBFAC5460539372CE9E86 /* Pods_Telstra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8468347B1F307102BBF388 /* Pods_Telstra.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +35,11 @@
 		7C14C47B20859EEF002FEC58 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		7C14C47D20859F1E002FEC58 /* RowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowModel.swift; sourceTree = "<group>"; };
 		7C14C47F2085A60B002FEC58 /* DropboxApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropboxApiClient.swift; sourceTree = "<group>"; };
+		7CB547BC2085E58F0095A1A3 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		7CB547BE2085E8A10095A1A3 /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
+		7CB547C12085E8C50095A1A3 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		7CB547C32085E9210095A1A3 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		7CB547C52085F8DC0095A1A3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8F24F56563570110AFA4E7A4 /* Pods-Telstra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra.release.xcconfig"; path = "Pods/Target Support Files/Pods-Telstra/Pods-Telstra.release.xcconfig"; sourceTree = "<group>"; };
 		FE8468347B1F307102BBF388 /* Pods_Telstra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telstra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				7C14C46320842C28002FEC58 /* AppDelegate.swift */,
+				7CB547C72085F98C0095A1A3 /* ViewController */,
+				7CB547C82085F9940095A1A3 /* Cell */,
+				7CB547C92085F99F0095A1A3 /* Misc */,
+				7CB547C02085E8B40095A1A3 /* ViewModel */,
 				7C14C4812085A82E002FEC58 /* Services */,
 				7C14C4822085A83B002FEC58 /* Models */,
 				7C14C46720842C28002FEC58 /* Main.storyboard */,
@@ -102,6 +116,39 @@
 				7C14C47D20859F1E002FEC58 /* RowModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7CB547C02085E8B40095A1A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7CB547BC2085E58F0095A1A3 /* ListViewModel.swift */,
+				7CB547BE2085E8A10095A1A3 /* RowViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7CB547C72085F98C0095A1A3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7CB547C12085E8C50095A1A3 /* ListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7CB547C82085F9940095A1A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CB547C32085E9210095A1A3 /* CustomCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7CB547C92085F99F0095A1A3 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				7CB547C52085F8DC0095A1A3 /* Constant.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 		8907D4E84C8FA7AE10E37B59 /* Pods */ = {
@@ -233,9 +280,14 @@
 			files = (
 				7C14C46420842C28002FEC58 /* AppDelegate.swift in Sources */,
 				7C14C47A20859E8F002FEC58 /* ApiClient.swift in Sources */,
+				7CB547BD2085E58F0095A1A3 /* ListViewModel.swift in Sources */,
 				7C14C47E20859F1E002FEC58 /* RowModel.swift in Sources */,
+				7CB547C42085E9210095A1A3 /* CustomCell.swift in Sources */,
 				7C14C47C20859EEF002FEC58 /* DataModel.swift in Sources */,
 				7C14C4802085A60B002FEC58 /* DropboxApiClient.swift in Sources */,
+				7CB547C62085F8DC0095A1A3 /* Constant.swift in Sources */,
+				7CB547C22085E8C50095A1A3 /* ListViewController.swift in Sources */,
+				7CB547BF2085E8A10095A1A3 /* RowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +435,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Telstra/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.siavash.Telstra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -399,7 +454,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Telstra/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.siavash.Telstra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -13,22 +13,7 @@ enum ApiError: Error {
     case jsonEncodingError
 }
 
-enum ApiEnvironment: String {
-    case dev = "dev"
-    case prod = "prod"
-}
-enum ApiHttpMethodType: String {
-    case post = "POST"
-    case get = "GET"
-    case patch = "PATCH"
-    case delete = "DELETE"
-}
 struct ApiObject {
-    let baseUrl: URL? = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json")
-    let env: ApiEnvironment = .dev
-    let basePath: String // directory like /auth
-    let path: String? //  for example (/register)
-    let type: ApiHttpMethodType
-    let params: [String: Any]?
+    let baseUrl: URL? = URL(string: Constant.urlString)
 }
 
